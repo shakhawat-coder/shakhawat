@@ -5,14 +5,14 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import Index from "./components/Home";
 import RootLayout from "./components/RootLayout/RootLayout";
+import Home from "./components/Home/Home";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
-        <Route index element={<Index />} />
+        <Route index element={<Home />} />
       </Route>
     )
   );

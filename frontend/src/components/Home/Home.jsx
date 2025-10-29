@@ -7,7 +7,7 @@ import Experience from "../Homepage/Experience/Experience";
 import Education from "../Homepage/Education/Education";
 import Contact from "../Homepage/Contact/Contact";
 
-const Index = () => {
+const Home = () => {
   return (
     <>
       <Bannar />
@@ -21,4 +21,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Home;
