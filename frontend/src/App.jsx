@@ -6,7 +6,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import RootLayout from "./components/RootLayout/RootLayout";
-import Home from "./components/Home/Home";
+import Home from "./components/Home/Home.jsx";
 
 function App() {
   const router = createBrowserRouter(
