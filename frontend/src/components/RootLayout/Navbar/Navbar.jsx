@@ -18,11 +18,17 @@ const Navbar = () => {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
+    const savedTheme =
+      typeof window !== "undefined" ? localStorage.getItem("theme") : null;
     if (savedTheme === "dark" || savedTheme === "light") {
       setTheme(savedTheme);
+    } else if (typeof window !== "undefined" && window.matchMedia) {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      setTheme(prefersDark ? "dark" : "light");
     } else {
-      setTheme(systemPrefersDark ? "dark" : "light");
+      setTheme("light");
     }
   }, []);
 
