@@ -32,7 +32,6 @@ const Navbar = () => {
     }
   }, []);
 
-  // Apply theme whenever it changes
   useEffect(() => {
     const root = document.documentElement;
 
