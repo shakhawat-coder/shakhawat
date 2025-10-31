@@ -51,7 +51,7 @@ const Projects = () => {
       className="flex flex-col justify-center items-center bg-gray-50 dark:bg-[#0D1117] text-gray-800 dark:text-gray-200 px-6 py-16 transition-colors duration-500"
     >
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-blue-600 dark:text-blue-400">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-800 dark:text-gray-400">
           Some of My Works
         </h2>
 

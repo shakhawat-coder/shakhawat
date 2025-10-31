@@ -25,17 +25,20 @@ const Experience = () => {
     <>
       <section
         id="experience"
-        className="flex flex-col justify-center items-center bg-gray-50 dark:bg-[#0D1117] text-gray-800 dark:text-gray-200 px-6 py-16 transition-colors duration-500"
+        className="flex flex-col justify-center items-center bg-[linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.9)),url('/bannerbg2.jpg')] dark:bg-[linear-gradient(rgba(0,0,0,0.95),rgba(0,0,0,0.95)),url('/bannerbg2.jpg')] bg-cover bg-center min-h-screen bg-[#f9f9f9] dark:bg-[#050505] text-gray-800 dark:text-gray-200 px-6 py-16 transition-colors duration-500"
       >
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-blue-600 dark:text-blue-400 text-center">
+        <div className="w-full sm:max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-800 dark:text-gray-400 text-center">
             My Experience
           </h2>
-          <div className=" relative after:absolute after:top-0 after:left-1/2 after:w-0.5 after:h-full after:bg-gray-400  after:dark:bg-blue-400 ">
+          <div className=" relative after:absolute after:top-0 after:left-1/2 sm:after:w-0.5 after:h-full after:bg-gray-400  after:dark:bg-blue-400 ">
             {experiences.map((exp, index) => (
-              <div key={index} className="mb-10 ml-6">
-                <div className="grid grid-cols-2 gap-15">
-                  <div className="col-span-1 text-right">
+              <div
+                key={index}
+                className="border sm:border-0 sm:p-0 border-gray-300 dark:border-gray-600 p-3 rounded-xl mb-5 sm:mb-10 sm:ml-6"
+              >
+                <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-15">
+                  <div className="col-span-1 sm:text-right">
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                       {exp.role}
                     </h3>
@@ -45,7 +48,7 @@ const Experience = () => {
                   </div>
 
                   <div className="col-span-1 ">
-                    <span className="absolute left-[calc(50%-9px)] flex items-center justify-center w-5 h-5 bg-blue-600 dark:bg-blue-400 rounded-full z-50 dark:ring-[#0D1117]" />
+                    <span className="absolute left-[calc(50%-9px)] flex items-center justify-center sm:w-5 h-5 bg-blue-600 dark:bg-blue-400 rounded-full z-50 dark:ring-[#0D1117]" />
                     <h4 className="text-md font-medium text-blue-600 dark:text-blue-400">
                       {exp.company}{" "}
                     </h4>
@@ -55,35 +58,6 @@ const Experience = () => {
                     </p>
                   </div>
                 </div>
-                {/* Timeline dot */}
-                {/* <span className="absolute -left-9 flex items-center justify-center w-6 h-6 bg-blue-600 dark:bg-blue-400 rounded-full ring-4 ring-gray-50 dark:ring-[#0D1117]" /> */}
-
-                {/* Content */}
-                {/* <div className="bg-white dark:bg-[#161B22] p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                      {exp.role}
-                    </h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0">
-                      {exp.period}
-                    </p>
-                  </div>
-                  <h4 className="text-md font-medium text-blue-600 dark:text-blue-400 mt-1">
-                    {exp.company}{" "}
-                    <span className="text-gray-500">| {exp.location}</span>
-                  </h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-3 leading-relaxed">
-                    {exp.description}
-                  </p>
-                  <a
-                    href={exp.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 mt-3 hover:underline"
-                  >
-                    Visit Website <FaExternalLinkAlt className="h-3 w-3" />
-                  </a>
-                </div> */}
               </div>
             ))}
           </div>

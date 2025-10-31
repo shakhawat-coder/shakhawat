@@ -98,7 +98,7 @@ const Skills = () => {
       className="min-h-screen flex flex-col justify-center items-center  text-gray-800 dark:text-gray-200 px-6 py-16 transition-colors duration-500  bg-[linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url('/skillbg2.jpg')] dark:bg-[linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url('/skillbg2.jpg')] bg-cover bg-center text-center "
     >
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-blue-600 dark:text-blue-400">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-800 dark:text-gray-400">
           My Skills
         </h2>
         <div className="space-y-16">
